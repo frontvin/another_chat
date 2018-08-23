@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: back.dockerfile
+    volumes:
+      - './Backend/:/var/backend'
+    ports:
+      - '3000:3000'
+    command: forever server.js
+
